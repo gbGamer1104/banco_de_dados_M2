@@ -62,7 +62,7 @@ SELECT p.id_pedido, c.nome, t.total
 	
     
 #8 - Pedidos com pagamento aprovado
-SELECT p.id_pedido, c.nome, pg.tipo_pagamento, pg.valor
+SELECT p.id_pedido, c.nome, pg.tipo_pagamento, p.valor_total
 	FROM pedidos p
 	INNER JOIN clientes c ON p.id_cliente = c.id_cliente
 	INNER JOIN pagamentos pg ON p.id_pedido = pg.id_pedido
